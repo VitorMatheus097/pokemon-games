@@ -15,8 +15,9 @@ export class FetchService {
     return new Promise((resolve) => {
       const url = this.helperService.formatUrl('generation');
 
-      this.httpClient.get<any>(url).subscribe((response) => {
-        resolve(response);
+      this.httpClient.get<any>(url).subscribe((response: any) => {
+        const data = response ? response : {};
+        resolve(data);
       }, (error) => {
         this.helperService.handleError(error);
         resolve(null);

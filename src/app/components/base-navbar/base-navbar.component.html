@@ -5,9 +5,10 @@
 
   <links>
     <ul class="navbar-nav mr-auto">
-      <li [class]="isActive('home') ? 'nav-item active' : 'nav-item'">
-        <a class="nav-link waves-light" [attr.href]="!isActive('home') ? '/home': null" mdbWavesEffect>
-          Home<span *ngIf="isActive('home')" class="sr-only">(current)</span>
+      <li [class]="isActive('generation-list') ? 'nav-item active' : 'nav-item'">
+        <a class="nav-link waves-light" [attr.href]="!isActive('generation-list') ? '/generations': null"
+          mdbWavesEffect>
+          Generations<span *ngIf="isActive('generation-list')" class="sr-only">(current)</span>
         </a>
       </li>
     </ul>

@@ -5,16 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BaseNavbarComponent } from './components/base-navbar/base-navbar.component';
+import { PageGenerationListComponent } from './components/page-generation-list/page-generation-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageHomeComponent,
     PageNotFoundComponent,
-    BaseNavbarComponent
+    BaseNavbarComponent,
+    PageGenerationListComponent
   ],
   imports: [
     BrowserModule,
