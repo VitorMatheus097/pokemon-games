@@ -23,4 +23,8 @@ export class PageGenerationListComponent implements OnInit {
     return !this.data;
   }
 
+  getGenerationUrl(url: string): string {
+    return 'generation-details?id=' + url.slice(0, -1).split('/').pop();
+  }
+
 }

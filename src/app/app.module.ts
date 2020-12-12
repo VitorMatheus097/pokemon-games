@@ -8,13 +8,15 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BaseNavbarComponent } from './components/base-navbar/base-navbar.component';
 import { PageGenerationListComponent } from './components/page-generation-list/page-generation-list.component';
+import { PageGenerationDetailsComponent } from './components/page-generation-details/page-generation-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     BaseNavbarComponent,
-    PageGenerationListComponent
+    PageGenerationListComponent,
+    PageGenerationDetailsComponent
   ],
   imports: [
     BrowserModule,

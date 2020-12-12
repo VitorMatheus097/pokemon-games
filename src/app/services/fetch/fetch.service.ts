@@ -20,7 +20,19 @@ export class FetchService {
         resolve(data);
       }, (error) => {
         this.helperService.handleError(error);
-        resolve(null);
+      });
+    });
+  }
+
+  getGenerationDetails(id: string): Promise<void> {
+    return new Promise((resolve) => {
+      const url = this.helperService.formatUrl('generation/' + id);
+
+      this.httpClient.get<any>(url).subscribe((response: any) => {
+        const data = response ? response : {};
+        resolve(data);
+      }, (error) => {
+        this.helperService.handleError(error);
       });
     });
   }

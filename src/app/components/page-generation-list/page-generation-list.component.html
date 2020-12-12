@@ -1,6 +1,6 @@
-<app-base-navbar activePage='generation-list'></app-base-navbar>
+<app-base-navbar activePage='generation'></app-base-navbar>
 
-<div class="container mt-5">
+<div class="container-fluid mt-5">
   <div *ngIf="isLoading()" class="d-flex justify-content-center">
     <mdb-spinner spinnerColor="red"></mdb-spinner>
     <div class="spinner-border" role="status">
@@ -16,6 +16,10 @@
             <mdb-card-title>
               <h4 class="text-uppercase" [innerHTML]="generation.name"></h4>
             </mdb-card-title>
+
+            <div class="flex-row float-right">
+              <a [href]="getGenerationUrl(generation.url)" class="card-link text-muted">Click for Details</a>
+            </div>
           </mdb-card-body>
         </mdb-card>
       </div>
