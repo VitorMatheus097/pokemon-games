@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { FetchService } from 'src/app/services/fetch/fetch.service';
 import { HelperService } from 'src/app/services/helper/helper.service';
 
@@ -9,6 +9,11 @@ import { HelperService } from 'src/app/services/helper/helper.service';
   styleUrls: ['./page-generation-details.component.css']
 })
 export class PageGenerationDetailsComponent implements OnInit {
+  public chartColors: Array<any>;
+  public chartDatasets: Array<any>;
+  public chartLabels: Array<any>;
+  public chartOptions: any;
+  public chartType: string;
   public data: any;
 
   constructor(
@@ -27,6 +32,7 @@ export class PageGenerationDetailsComponent implements OnInit {
 
       this.fetchService.getGenerationDetails(id).then((data: any) => {
         this.data = data ? data : {};
+        this.fillChart();
       });
     });
   }
@@ -34,5 +40,35 @@ export class PageGenerationDetailsComponent implements OnInit {
   isLoading(): boolean {
     return !this.data;
   }
+
+  fillChart(): void {
+    this.chartType = 'doughnut';
+
+    this.chartDatasets = [{
+      data: [
+        this.data.abilities.length || 0,
+        this.data.moves.length || 0,
+        this.data.pokemon_species.length || 0,
+        this.data.types.length || 0,
+        this.data.version_groups.length || 0],
+      label: 'Generation Data'
+    }];
+
+    this.chartLabels = ['Added Abilities', 'Added Moves', 'Added Species', 'Added Types', 'Added Group Versions'];
+
+    this.chartColors = [{
+      backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+      hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+      borderWidth: 2,
+    }];
+
+    this.chartOptions = {
+      responsive: true
+    };
+  }
+
+  chartClicked(e: any): void { }
+
+  chartHovered(e: any): void { }
 
 }

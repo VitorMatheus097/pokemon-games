@@ -1,0 +1,11 @@
+<a class="list-group-item list-group-item-action waves-light m-0" (click)="abilities.toggle()" [innerHTML]="name"
+  mdbWavesEffect></a>
+
+<div mdbCollapse #abilities="bs-collapse">
+  <ul class="list-group list-group-flush m-0">
+    <li *ngFor="let value of values; let index = index" class="list-group-item text-capitalize"
+      [innerHTML]="formatName(value, index)"></li>
+
+    <li *ngIf="!values.length" class="list-group-item text-center">No Data</li>
+  </ul>
+</div>

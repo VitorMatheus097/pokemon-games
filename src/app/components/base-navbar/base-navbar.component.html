@@ -6,8 +6,7 @@
   <links>
     <ul class="navbar-nav mr-auto">
       <li [class]="isActive('generation') ? 'nav-item active' : 'nav-item'">
-        <a class="nav-link waves-light" [attr.href]="!isActive('generation') ? '/generations': null"
-          mdbWavesEffect>
+        <a class="nav-link waves-light" href="/generations" mdbWavesEffect>
           Generations<span *ngIf="isActive('generation')" class="sr-only">(current)</span>
         </a>
       </li>
