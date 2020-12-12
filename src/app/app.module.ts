@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { BaseNavbarComponent } from './components/base-navbar/base-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageHomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BaseNavbarComponent
   ],
   imports: [
     BrowserModule,

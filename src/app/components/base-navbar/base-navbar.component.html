@@ -1,0 +1,15 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark red lighten-1" [containerInside]="false">
+  <mdb-navbar-brand>
+    <span class="navbar-brand">PokemonGames</span>
+  </mdb-navbar-brand>
+
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li [class]="isActive('home') ? 'nav-item active' : 'nav-item'">
+        <a class="nav-link waves-light" [attr.href]="!isActive('home') ? '/home': null" mdbWavesEffect>
+          Home<span *ngIf="isActive('home')" class="sr-only">(current)</span>
+        </a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
