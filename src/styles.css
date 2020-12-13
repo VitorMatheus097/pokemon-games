@@ -9,3 +9,7 @@
   max-width: 350px;
   margin: 0 auto;
 }
+
+.ngx-pagination .current {
+  background: grey !important;
+}

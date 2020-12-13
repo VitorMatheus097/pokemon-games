@@ -13,19 +13,18 @@
 
     <div class="chart-responsive">
       <canvas mdbChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors"
-        [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)">
+        [options]="chartOptions" [legend]="true">
       </canvas>
     </div>
 
     <h3 class="h3-responsive mt-5">Added Resources Lists</h3>
 
     <div class="list-group">
-      <app-base-list [values]="data.abilities" name="Added Abilities" class="mb-2"></app-base-list>
-      <app-base-list [values]="data.moves" name="Added Moves" class="mb-2"></app-base-list>
-      <app-base-list [values]="data.pokemon_species" name="Added Species" class="mb-2"></app-base-list>
-      <app-base-list [values]="data.types" name="Added Types" class="mb-2"></app-base-list>
-      <app-base-list [values]="data.version_groups" name="Added Group Versions" class="mb-2"></app-base-list>
+      <app-base-list [values]="data.abilities" id="abilities" name="Added Abilities" class="mb-2"></app-base-list>
+      <app-base-list [values]="data.moves" id="moves" name="Added Moves" class="mb-2"></app-base-list>
+      <app-base-list [values]="data.pokemon_species" id="pokemon_species" name="Added Species" class="mb-2"></app-base-list>
+      <app-base-list [values]="data.types" id="types" name="Added Types" class="mb-2"></app-base-list>
+      <app-base-list [values]="data.version_groups" id="version_groups" name="Added Group Versions" class="mb-2"></app-base-list>
     </div>
   </div>
 </div>

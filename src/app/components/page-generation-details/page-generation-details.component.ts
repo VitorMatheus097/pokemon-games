@@ -67,8 +67,4 @@ export class PageGenerationDetailsComponent implements OnInit {
     };
   }
 
-  chartClicked(e: any): void { }
-
-  chartHovered(e: any): void { }
-
 }

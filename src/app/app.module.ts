@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CollapseModule, WavesModule } from 'angular-bootstrap-md';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import { BaseListComponent } from './components/base-list/base-list.component';
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
     CollapseModule,
-    WavesModule
+    WavesModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
