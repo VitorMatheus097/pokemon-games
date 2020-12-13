@@ -4,7 +4,7 @@
 
 ### Requirements
 
-* v14.15.1 (Without Docker)
+* **NodeJS:** v14.15.1 (Without Docker)
 
 ## Installation Guide (Unix)
 
