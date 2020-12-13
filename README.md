@@ -2,28 +2,41 @@
 
 **Author:** Vitor Carvalho
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+### Requirements
 
-## Development server
+* v14.15.1 (Without Docker)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation Guide (Unix)
 
-## Code scaffolding
+To start the installation, the repository needs to be cloned at a preferred location. This can be done executing the following command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+git clone https://github.com/VitorMatheus097/pokemon-games [location]
+```
 
-## Build
+After cloning, access the directory of the application using:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+cd [location]
+```
 
-## Running unit tests
+From now this directory will be referred as the ```root directory``` or just ```/```.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Initializing the application
 
-## Running end-to-end tests
+After cloning the application, it is ready to be tested, and can be done by executing the following command using a command line tool in the ```root directory```:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+docker-compose up
+```
 
-## Further help
+After this command, the application is ready to go, and can be accessed at http://localhost:8080.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If **not using docker**, in order to run the application in development mode, with NodeJs already installed, run the following commands at the ```root directory```:
+
+```
+npm install
+npm start
+```
+
+After this, the application will be started, and can be accessed at http://localhost:4200.
